@@ -88,7 +88,7 @@ body {
 
 /* Home Page */
 #hero{
-    background-image: url("img/bg2.png");
+    background-image: url("bg2.png");
     height: 90vh;
     width: 100%;
     background-size: cover;
