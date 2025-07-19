@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;}
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;}
+h4 {
+    font-size: 20px;
+    color: #222;}
+h6 {
+    font-weight: 700;
+    font-size: 12px;}
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;}
+
+.section-p1 {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;}
+
+.section-p2 {
+    margin: 60px 20px;
+    background-color: #fafafa;
+    text-align: center;}
+
+body {
+    width: 100%;}
+
+/*  Header Start */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #fbfbfb;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.06) ;
+    border: 0;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+#navbar li{
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+    border: 0;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+    border: 0;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* Home Page */
+#hero{
+    background-image: url("img/bg2.png");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 0 right 0;
+    padding: 0 40px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+    color: #79baec;
+}
+#hero h1{
+    color: #151b54;
+}
+#hero button{
+    background-image: url("img/button.png");
+    background-color: #daeefd ;
+    position: relative;
+    color: #151b54;
+    border: 0;
+    padding: 10px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* Location */
+#headquarters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#headquarters .locations{
+    width: 120px;
+    text-align: center;
+    padding: 12px 8px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #79baec;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin: 15px 0;
+}
+#headquarters .locations-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#headquarters .locations:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+    transform: translateY(-4px);
+}
+#headquarters .locations img{
+    border-radius: 4px;
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+#headquarters .locations h6{
+    display: inline-block;
+    padding: 3px 3px 3px 3px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #151b54;
+    background-color: #79baec;
+}
+
+
+/* Message Form */
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+form label{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+form input, form select, form textarea{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form button{
+    padding: 10px;
+    background-color: #151b54;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover{
+    background-color: #79baec;
+}
+
+#formResult{
+    margin-top: 30px;
+    text-align: left;
+    background-color: #e0f7e9;
+    border: 1px solid #b2dfdb;
+    padding: 15px;
+    border-radius: 4px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#message h2{
+    padding: 40px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){
+    #navbar{
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .locations{
+        display: block;
+        margin: 20px auto;
+    }
+    .locations-container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
